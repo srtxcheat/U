@@ -725,7 +725,7 @@ window.submitOrder = async () => {
 ➡️ Go to Admin Panel to verify & deliver key.`;
 
     try {
-        const workerUrl = "https://srtx-telegram-bot.srtxcheats.workers.dev";
+        const workerUrl = "https://srt-telegram-bot.samratsubedi163.workers.dev";
         await fetch(workerUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
