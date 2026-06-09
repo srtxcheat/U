@@ -16,10 +16,7 @@
     <button class="vtbtn" id="vtMobile" onclick="setViewMode('mobile')">
         <i class="fas fa-mobile-alt"></i> MOBILE
     </button>
-    <span>|</span>
-    <button class="vtbtn" id="vtDesktop" onclick="setViewMode('desktop')">
-        <i class="fas fa-desktop"></i> DESKTOP
-    </button>
+    
 </div>
 
 <!-- CLOUDFLARE VERIFY PAGE -->
@@ -214,8 +211,8 @@
     <main class="store-main">
         <div class="store-header">
             <div class="store-title-row">
-                <h2 class="store-title">AVAILABLE CHEATS</h2>
-                <span class="store-count" id="productCount">17 PRODUCTS</span>
+                <h2 class="store-title">AVAILABLE SERVICE & PRODUCT</h2>
+                <span class="store-count" id="productCount">19 PRODUCTS</span>
             </div>
             <p class="store-sub">Tap a product to view pricing</p>
 
@@ -233,10 +230,63 @@
                 <div class="chip chip-root" onclick="filterChip(this,'root')"><i class="fas fa-bug"></i> ROOT</div>
                 <div class="chip chip-ios" onclick="filterChip(this,'ios')"><i class="fab fa-apple"></i> iOS</div>
                 <div class="chip chip-pc" onclick="filterChip(this,'pc')"><i class="fas fa-desktop"></i> PC</div>
+                <div class="chip chip-ranspush" onclick="filterChip(this,'rankpush')"><i class="fas fa-star"></i> RANKPUSH</div>
+         
             </div>
         </div>
 
         <div class="products-list" id="productsList">
+<!-- P18: NEO STRIKE ROOT -->
+            <div class="product-row" data-tags="all" data-name="REDEEM CODE">
+                <div class="product-card" onclick="togglePrices('p18_list', this)">
+                    <div class="prod-img"><img src="https://i.postimg.cc/6p6RsF3K/play-store-google-play-google-logo-app-store-android-google-png-15.jpg" alt="Neo Strike"></div>
+                    <div class="prod-details">
+                        <h3>REDEEM CODE</h3>
+                        <div class="prod-meta">
+                            <span class="prod-tag tag-all"><i class="fa-brands fa-google-play"></i> ALL</span>
+                            <span class="prod-platform"><i class="fas fa-mobile-alt"></i> redeem code </span>
+                        </div>
+                    </div>
+                    <span class="prod-badge">3 PLANS</span>
+                    <i class="fas fa-chevron-down prod-arrow"></i>
+                </div>
+                <div id="p18_list" class="price-list hidden">
+                    <div class="price-item" onclick="selectItem(this,'reedem code 500ind',950)"><span><i class="fas fa-bug"></i> reedem code 500ind</span><b>Rs 950</b></div>
+                    <div class="price-item" onclick="selectItem(this,'reedem code 1000ind',1800)"><span><i class="fas fa-bug"></i> reedem code 1000ind</span><b>Rs 1800</b></div>
+                    <div class="price-item" onclick="selectItem(this,'reedem code 2000ind',3500)"><span><i class="fas fa-bug"></i> reedem code 2000ind</span><b>Rs 3500</b></div>
+                     <button class="buy-btn hidden" onclick="startCheckout()"><i class="fas fa-bolt"></i> PROCEED TO BUY</button>
+                </div>
+            </div>
+
+
+            <!-- P19: NEO STRIKE ROOT -->
+            <div class="product-row" data-tags="rankpush" data-name="CS RANK PUSH">
+                <div class="product-card" onclick="togglePrices('p19_list', this)">
+                    <div class="prod-img"><img src="https://i.postimg.cc/FRfF0VKs/file-0000000063147207932d5934471e883a.png" alt="Neo Strike"></div>
+                    <div class="prod-details">
+                        <h3>CS RANK PUSH</h3>
+                        <div class="prod-meta">
+                            <span class="prod-tag tag-randpush"><i class="fas fa-gamebad"></i> RANK PUSH</span>
+                            <span class="prod-platform"><i class="fas fa-mobile-alt"></i> CS RANK</span>
+                        </div>
+                    </div>
+                    <span class="prod-badge">5 PLANS</span>
+                    <i class="fas fa-chevron-down prod-arrow"></i>
+                </div>
+                <div id="p19_list" class="price-list hidden">
+                    <div class="price-item" onclick="selectItem(this,'CS-RANK PUSH - 10 ⭐ ',50)"><span><i class="fas fa-star"></i> CS-RANK PUSH - 10 ⭐</span><b>Rs 50</b></div>
+                    <div class="price-item" onclick="selectItem(this,'CS-RANK PUSH - 20 ⭐',90)"><span><i class="fas fa-star"></i> CS-RANK PUSH - 20 ⭐</span><b>Rs 90</b></div>
+                    <div class="price-item" onclick="selectItem(this,'CS-RANK PUSH - 50 ⭐',450)"><span><i class="fas fa-star"></i> CS-RANK PUSH - 50 ⭐</span><b>Rs 450</b></div>
+                    <div class="price-item" onclick="selectItem(this,'CS-RANK PUSH - 100 ⭐',850)"><span><i class="fas fa-star"></i> CS-RANK PUSH - 100 ⭐</span><b>Rs 850</b></div>
+                    <div class="price-item" onclick="selectItem(this,'CS-RANK PUSH - GRANDMASTER',1200)"><span><i class="fas fa-star"></i> CS-RANK PUSH - GRANDMASTER</span><b>Rs 1200</b></div>
+                    <button class="buy-btn hidden" onclick="startCheckout()"><i class="fas fa-bolt"></i> PROCEED TO BUY</button>
+                </div>
+            </div>
+    
+
+        
+
+            
             <!-- P1: DRIP CLINT GLOBAL -->
             <div class="product-row" data-tags="nonroot" data-name="DRIP CLINT GLOBAL">
                 <div class="product-card" onclick="togglePrices('p1_list', this)">
