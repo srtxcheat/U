@@ -511,6 +511,7 @@ input[type="number"]::-webkit-inner-spin-button { display: none; }
 .chip-root.active-chip    { background: #c2410c; box-shadow: 0 0 12px rgba(249,115,22,0.3); }
 .chip-ios.active-chip     { background: #be185d; box-shadow: 0 0 12px rgba(236,72,153,0.3); }
 .chip-pc.active-chip      { background: #0369a1; box-shadow: 0 0 12px rgba(56,189,248,0.3); }
+.chip-pc.rankpush-chip      { background: #efff14; box-shadow: 0 0 12px rgba(248,222,46,0.3); }
 
 /* No results */
 .no-results {
