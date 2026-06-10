@@ -705,7 +705,7 @@ window.submitOrder = async () => {
     }
 
     // 2. Send Telegram notification
-const tgMessage =
+    const tgMessage =
 `🔔 *NEW PAYMENT RECEIVED*
 ✅ *CF Turnstile: VERIFIED* (bot-protected)
 
@@ -720,14 +720,9 @@ const tgMessage =
   Email: ${currentUserEmail}
   UID: \`${currentUID}\`
 
-
 📅 ${date}
 
-
-
-🌐 *Info:*
-  IP Address: \`${clientInfo.ipAddress}\`
-  ➡️ Go to Admin Panel to verify & deliver key.`;
+➡️ Go to Admin Panel to verify & deliver key.`;
 
     try {
         const workerUrl = "https://srtx-telegram-bot.srtxcheats.workers.dev";
@@ -741,8 +736,6 @@ const tgMessage =
     }
 
     clearPaymentState(); // ← Clear saved state after successful submission
-
-
 
 
     // 3. Show success screen
