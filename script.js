@@ -721,19 +721,16 @@ const tgMessage =
   UID: \`${currentUID}\`
 
 
-
-
-🌐 *Device Info:*
-  IP Address: \`${clientInfo.ipAddress}\`
-  Device Name: ${clientInfo.deviceName}
-  Device Model: ${clientInfo.deviceModel}
-
 📅 ${date}
 
-➡️ Go to Admin Panel to verify & deliver key.`;
+
+
+🌐 *Info:*
+  IP Address: \`${clientInfo.ipAddress}\`
+  ➡️ Go to Admin Panel to verify & deliver key.`;
 
     try {
-        const workerUrl = "https://srt-telegram-bot.samratsubedi163.workers.dev";
+        const workerUrl = "https://srtx-telegram-bot.srtxcheats.workers.dev";
         await fetch(workerUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -743,7 +740,11 @@ const tgMessage =
         console.warn("Telegram notify failed:", e.message);
     }
 
-    clearPaymentState();
+    clearPaymentState(); // ← Clear saved state after successful submission
+
+
+
+
     // 3. Show success screen
     closeModals();
     navigateTo('store');
