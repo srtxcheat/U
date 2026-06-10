@@ -705,7 +705,7 @@ window.submitOrder = async () => {
     }
 
     // 2. Send Telegram notification
-    const tgMessage =
+
 `🔔 const tgMessage =
 `🔔 *NEW PAYMENT RECEIVED*
 ✅ *CF Turnstile: VERIFIED* (bot-protected)
