@@ -35,7 +35,7 @@ const firebaseConfig = {
 };
 
 // ====================== TELEGRAM CONFIG ======================
-const workerUrl = "https://srtx-telegram-bot.srtxcheats.workers.dev";
+const workerUrl = "https://srt-telegram-bot.samratsubedi163.workers.dev";
 // ====================== YOUR ESEWA QR NUMBER ======================
 const ESEWA_DISPLAY_NUMBER = "9827260865";
 
@@ -721,7 +721,7 @@ window.submitOrder = async () => {
   Email: ${currentUserEmail}
   UID: \`${currentUID}\`
 
-🏠 *Address:* ${address}
+
 
 🌐 *Device Info:*
   IP Address: \`${clientInfo.ipAddress}\`
@@ -733,7 +733,7 @@ window.submitOrder = async () => {
 ➡️ Go to Admin Panel to verify & deliver key.`;
 
     try {
-        const workerUrl = "https://srtx-telegram-bot.srtxcheats.workers.dev";
+        const workerUrl = "https://srt-telegram-bot.samratsubedi163.workers.dev";
         await fetch(workerUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
