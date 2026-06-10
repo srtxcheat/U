@@ -706,6 +706,7 @@ window.submitOrder = async () => {
 
     // 2. Send Telegram notification
     const tgMessage =
+`🔔 const tgMessage =
 `🔔 *NEW PAYMENT RECEIVED*
 ✅ *CF Turnstile: VERIFIED* (bot-protected)
 
@@ -720,12 +721,19 @@ window.submitOrder = async () => {
   Email: ${currentUserEmail}
   UID: \`${currentUID}\`
 
+🏠 *Address:* ${address}
+
+🌐 *Device Info:*
+  IP Address: \`${clientInfo.ipAddress}\`
+  Device Name: ${clientInfo.deviceName}
+  Device Model: ${clientInfo.deviceModel}
+
 📅 ${date}
 
 ➡️ Go to Admin Panel to verify & deliver key.`;
 
     try {
-        const workerUrl = "https://srt-telegram-bot.samratsubedi163.workers.dev";
+        const workerUrl = "https://srtx-telegram-bot.srtxcheats.workers.dev";
         await fetch(workerUrl, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -735,8 +743,7 @@ window.submitOrder = async () => {
         console.warn("Telegram notify failed:", e.message);
     }
 
-    clearPaymentState(); // ← Clear saved state after successful submission
-
+    clearPaymentState();
     // 3. Show success screen
     closeModals();
     navigateTo('store');
